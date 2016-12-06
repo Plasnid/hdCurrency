@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="converterSizer">
+      <div class="outerPanel">
+        <div class="panel-body">
+          <form action="" method="POST" role="form">
+            <legend>Currency Converter</legend>
+            <div class="currencyInputLabel">
+              <label>Type in amount and select currency:</label>
+            </div>
+            <div class="currencyInput">
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="Enter value" data-ng-model="fromValue" data-ng-change="forExConvert()">
+              </div>
+            </div>
+            <div class="currencyInput">
+              <div class="form-group">
+                <select ng-model="fromType" class="form-control" required data-ng-change="forExConvert()" ng-options="k for (k, v) in rates track by v">
+                  <option value="">--Select--</option>
+                </select>
+              </div>
+            </div>
+            <div class="currencyInputLabel">
+              <label>Converted amount:</label>
+            </div>
+            <div class="currencyInput">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter value" data-ng-model="toValue" data-ng-change="forExConvert()">
+              </div>
+            </div>
+            <div class="currencyInput">
+              <div class="form-group">
+                <select ng-model="toType" class="form-control" required data-ng-change="forExConvert()" ng-options="k for (k, v) in rates track by v">
+                  <option value="">--Select--</option>
+                </select>
+              </div>
+            </div>
+          </form>
+          <div class="disclaimerRow">
+            <a href="#">disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
